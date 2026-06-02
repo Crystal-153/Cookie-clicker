@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b65s62cp7wyi5"]
+
+[ext_resource type="Script" uid="uid://g3m1hgv4rjg5" path="res://node.gd" id="1_112p8"]
+[ext_resource type="Texture2D" uid="uid://bfbu2sfvoo0th" path="res://pixil-frame-0-2.png" id="2_e2u21"]
+[ext_resource type="Texture2D" uid="uid://jp86c45vl67j" path="res://pixil-frame-0-3.png" id="3_bss38"]
+
+[node name="Node" type="Node" unique_id=1227208884]
+script = ExtResource("1_112p8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1974965676]
+texture_filter = 1
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_e2u21")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1504253255]
+texture_filter = 1
+offset_left = 442.0
+offset_top = 225.0
+offset_right = 656.0
+offset_bottom = 456.0
+texture_normal = ExtResource("3_bss38")
+stretch_mode = 6
+
+[node name="Button" type="Button" parent="." unique_id=1479874770]
+offset_left = 1083.0
+offset_right = 1130.0
+offset_bottom = 31.0
+text = "Shop"
+
+[node name="Label" type="Label" parent="." unique_id=444971971]
+offset_left = 15.0
+offset_top = 10.0
+offset_right = 76.0
+offset_bottom = 33.0
+text = "Score: 0"
