@@ -7,10 +7,14 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
 func _on_cookie_pressed() -> void:
 	score+=1 
 	scoreText.text = "Score: "+ str(score)
+
+
+func _on_shop_pressed() -> void:
+	pass # Replace with function body.
