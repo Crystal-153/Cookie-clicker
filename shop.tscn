@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://c8jxmdss3v5hk"]
 
+[ext_resource type="Script" uid="uid://bldu7blv6gc2n" path="res://shop.gd" id="1_viryw"]
+
 [node name="shop" type="Node" unique_id=1456735525]
+script = ExtResource("1_viryw")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1096950606]
 offset_right = 1152.0
@@ -24,18 +27,7 @@ text = "More crumble per cookie
 (Adds +1)"
 horizontal_alignment = 1
 
-[node name="plusone2" type="Label" parent="." unique_id=909417124]
-offset_left = 810.0
-offset_top = 119.0
-offset_right = 1052.0
-offset_bottom = 178.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Golden cookie
-(Adds +1% chance of a 10x)"
-horizontal_alignment = 1
-
-[node name="plusone3" type="Label" parent="." unique_id=983460236]
+[node name="ovencookie" type="Label" parent="." unique_id=983460236]
 offset_left = 462.0
 offset_top = 119.0
 offset_right = 704.0
@@ -44,6 +36,17 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Cookies are in the oven
 (Adds +1 Passive)"
+horizontal_alignment = 1
+
+[node name="goldencookie" type="Label" parent="." unique_id=909417124]
+offset_left = 810.0
+offset_top = 119.0
+offset_right = 1071.0
+offset_bottom = 178.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Golden cookie
+(Adds +1% chance of a 10x)"
 horizontal_alignment = 1
 
 [node name="plusonePrice" type="Label" parent="." unique_id=1185893994]
@@ -56,7 +59,7 @@ theme_override_font_sizes/font_size = 20
 text = "Cost: 0"
 horizontal_alignment = 1
 
-[node name="plusonePrice2" type="Label" parent="." unique_id=1650940985]
+[node name="ovenPrice" type="Label" parent="." unique_id=1650940985]
 offset_left = 462.0
 offset_top = 193.0
 offset_right = 704.0
@@ -66,7 +69,7 @@ theme_override_font_sizes/font_size = 20
 text = "Cost: 0"
 horizontal_alignment = 1
 
-[node name="plusonePrice3" type="Label" parent="." unique_id=1079229929]
+[node name="goldenPrice" type="Label" parent="." unique_id=1079229929]
 offset_left = 810.0
 offset_top = 193.0
 offset_right = 1052.0
@@ -76,28 +79,28 @@ theme_override_font_sizes/font_size = 20
 text = "Cost: 0"
 horizontal_alignment = 1
 
-[node name="Button2" type="Button" parent="." unique_id=1062689463]
+[node name="plusoneBuy" type="Button" parent="." unique_id=1062689463]
 offset_left = 151.0
 offset_top = 231.0
 offset_right = 286.0
 offset_bottom = 283.0
 text = "Buy"
 
-[node name="Button3" type="Button" parent="." unique_id=1917093924]
+[node name="ovenBuy" type="Button" parent="." unique_id=1917093924]
 offset_left = 518.0
 offset_top = 231.0
 offset_right = 653.0
 offset_bottom = 283.0
 text = "Buy"
 
-[node name="Button4" type="Button" parent="." unique_id=640108693]
+[node name="goldenBuy" type="Button" parent="." unique_id=640108693]
 offset_left = 865.0
 offset_top = 231.0
 offset_right = 1000.0
 offset_bottom = 283.0
 text = "Buy"
 
-[node name="plusonePrice4" type="Label" parent="." unique_id=1642263699]
+[node name="plusoneAmount" type="Label" parent="." unique_id=1642263699]
 offset_left = 100.0
 offset_top = 345.0
 offset_right = 342.0
@@ -107,7 +110,7 @@ theme_override_font_sizes/font_size = 20
 text = "You have: 0"
 horizontal_alignment = 1
 
-[node name="plusonePrice5" type="Label" parent="." unique_id=1483295053]
+[node name="ovenAmount" type="Label" parent="." unique_id=1483295053]
 offset_left = 462.0
 offset_top = 345.0
 offset_right = 704.0
@@ -117,7 +120,7 @@ theme_override_font_sizes/font_size = 20
 text = "You have: 0"
 horizontal_alignment = 1
 
-[node name="plusonePrice6" type="Label" parent="." unique_id=811253441]
+[node name="goldenAmount" type="Label" parent="." unique_id=811253441]
 offset_left = 810.0
 offset_top = 345.0
 offset_right = 1052.0
@@ -127,9 +130,12 @@ theme_override_font_sizes/font_size = 20
 text = "You have: 0"
 horizontal_alignment = 1
 
-[node name="Button5" type="Button" parent="." unique_id=229084780]
+[node name="more" type="Button" parent="." unique_id=229084780]
 offset_left = 958.0
 offset_top = 464.0
 offset_right = 1109.0
 offset_bottom = 512.0
 text = "More ->"
+
+[connection signal="pressed" from="plusoneBuy" to="." method="_on_plusone_buy_pressed"]
+[connection signal="pressed" from="ovenBuy" to="." method="_on_oven_buy_pressed"]

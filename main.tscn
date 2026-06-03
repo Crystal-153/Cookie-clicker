@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://b28kh7amyl040"]
+
+[ext_resource type="Script" uid="uid://dsrhrcvkq143d" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bfbu2sfvoo0th" path="res://pixil-frame-0-2.png" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://ccow6evdjegui" path="res://pixil-frame-0 (5).png" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://be235uc0c2e0p" path="res://pixil-frame-0 (4).png" id="3_lquwl"]
+
+[node name="game" type="Node" unique_id=1175136564]
+script = ExtResource("1_1bvp3")
+
+[node name="bg" type="TextureRect" parent="." unique_id=1838034068]
+texture_filter = 1
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_h2yge")
+
+[node name="shop" type="Button" parent="." unique_id=685892125]
+offset_left = 1040.0
+offset_top = 10.0
+offset_right = 1143.0
+offset_bottom = 53.0
+theme_override_font_sizes/font_size = 23
+text = "Shop"
+
+[node name="score" type="Label" parent="." unique_id=1748187853]
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 91.0
+offset_bottom = 37.0
+theme_override_font_sizes/font_size = 22
+text = "Cookies: 0"
+
+[node name="cookie" type="TextureButton" parent="." unique_id=97790874]
+texture_filter = 1
+offset_left = 392.0
+offset_top = 166.0
+offset_right = 694.0
+offset_bottom = 466.0
+action_mode = 0
+button_mask = 7
+texture_normal = ExtResource("2_1bvp3")
+texture_pressed = ExtResource("3_lquwl")
+stretch_mode = 6
+
+[connection signal="pressed" from="shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="cookie" to="." method="_on_cookie_pressed"]
