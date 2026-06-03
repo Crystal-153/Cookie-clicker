@@ -140,3 +140,4 @@ text = "More ->"
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="plusoneBuy" to="." method="_on_plusone_buy_pressed"]
 [connection signal="pressed" from="ovenBuy" to="." method="_on_oven_buy_pressed"]
+[connection signal="pressed" from="goldenBuy" to="." method="_on_golden_buy_pressed"]

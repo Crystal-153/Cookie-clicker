@@ -19,6 +19,8 @@ func _ready() -> void:
 	ownedText1.text="Owned: "+str(owned1)
 	priceText2.text="Cost: "+str(price2)
 	ownedText2.text="Owned: "+str(owned2)
+	priceText3.text="Cost: "+str(price3)
+	ownedText3.text="Owned: "+str(owned3)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -33,6 +35,7 @@ func _on_plusone_buy_pressed() -> void:
 		owned1+=1
 		priceText1.text="Cost: "+str(price1)
 		ownedText1.text="Owned: "+str(owned1)
+		
 	
 	
 	
@@ -51,3 +54,13 @@ func _on_oven_buy_pressed() -> void:
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://main.tscn")
+
+
+func _on_golden_buy_pressed() -> void:
+	if price3<=Gamee.score:
+		Gamee.score-=price3
+		price3*=1.5
+		owned3+=1
+		Gamee.goldenPercent+=0.01
+		priceText3.text="Cost: "+str(price3)
+		ownedText3.text="Owned: "+str(owned3)

@@ -14,7 +14,10 @@ func _on_shop_pressed() -> void:
 	get_tree().change_scene_to_file("res://shop.tscn")
 
 func _on_cookie_pressed() -> void:
-	Gamee.score+=Gamee.add
+	if randf_range(0.0,1.0)<Gamee.goldenPercent:
+		Gamee.score+=Gamee.add*10
+	else:
+		Gamee.score+=Gamee.add
 	scoreText.text = "Cookies: "+ str(Gamee.score)  
 
 
