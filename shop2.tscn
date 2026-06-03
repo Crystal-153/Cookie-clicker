@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://c0pd4ommcknb3"]
 
-[node name="shopSec" type="Node" unique_id=1155712594]
+[ext_resource type="Script" uid="uid://grhrcpn4fa4h" path="res://shop_2.gd" id="1_ym8ew"]
+
+[node name="shop2" type="Node" unique_id=1155712594]
+script = ExtResource("1_ym8ew")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1031385345]
 offset_right = 1152.0
@@ -26,6 +29,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Cost: 0"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="timestwoBuy" type="Button" parent="." unique_id=2087402176]
 offset_left = 151.0
@@ -133,3 +137,5 @@ offset_top = 10.0
 offset_right = 1135.0
 offset_bottom = 48.0
 text = "Back"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

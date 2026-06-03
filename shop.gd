@@ -15,8 +15,10 @@ static var price3=150
 static var owned3=0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	priceText1.text="Cost: "+str(price1)
+	ownedText1.text="Owned: "+str(owned1)
+	priceText2.text="Cost: "+str(price2)
+	ownedText2.text="Owned: "+str(owned2)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -24,21 +26,28 @@ func _process(delta: float) -> void:
 
 
 func _on_plusone_buy_pressed() -> void:
-	Gamee.score-=price1
-	Gamee.add+=1
-	price1*=2
-	owned1+=1
-	priceText1.text="Cost: "+str(price1)
-	ownedText1.text="Owned: "+str(owned1)
+	if price1<=Gamee.score:
+		Gamee.score-=price1
+		Gamee.add+=1
+		price1*=2
+		owned1+=1
+		priceText1.text="Cost: "+str(price1)
+		ownedText1.text="Owned: "+str(owned1)
 	
 	
 	
 
 
 func _on_oven_buy_pressed() -> void:
-	Gamee.score-=price2
-	price2*=1.5
-	owned2+=1
-	priceText2.text="Cost: "+str(price2)
-	ownedText2.text="Owned: "+str(owned2)
+	if price2<=Gamee.score:
+		Gamee.score-=price2
+		price2*=1.5
+		owned2+=1
+		Gamee.autoAmount+=1
+		priceText2.text="Cost: "+str(price2)
+		ownedText2.text="Owned: "+str(owned2)
 	
+
+
+func _on_back_pressed() -> void:
+	get_tree().change_scene_to_file("res://main.tscn")

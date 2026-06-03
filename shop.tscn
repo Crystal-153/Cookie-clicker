@@ -9,7 +9,7 @@ script = ExtResource("1_viryw")
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="Button" type="Button" parent="." unique_id=496455272]
+[node name="back" type="Button" parent="." unique_id=496455272]
 offset_left = 1010.0
 offset_top = 10.0
 offset_right = 1135.0
@@ -35,7 +35,7 @@ offset_bottom = 178.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Cookies are in the oven
-(Adds +1 Passive)"
+(Adds +1 Passive per sec)"
 horizontal_alignment = 1
 
 [node name="goldencookie" type="Label" parent="." unique_id=909417124]
@@ -137,5 +137,6 @@ offset_right = 1109.0
 offset_bottom = 512.0
 text = "More ->"
 
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="plusoneBuy" to="." method="_on_plusone_buy_pressed"]
 [connection signal="pressed" from="ovenBuy" to="." method="_on_oven_buy_pressed"]

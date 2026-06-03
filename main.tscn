@@ -42,5 +42,9 @@ texture_normal = ExtResource("2_1bvp3")
 texture_pressed = ExtResource("3_lquwl")
 stretch_mode = 6
 
+[node name="Timer" type="Timer" parent="." unique_id=902978705]
+autostart = true
+
 [connection signal="pressed" from="shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="cookie" to="." method="_on_cookie_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

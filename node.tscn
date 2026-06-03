@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://b65s62cp7wyi5"]
 
 [ext_resource type="Script" uid="uid://g3m1hgv4rjg5" path="res://node.gd" id="1_112p8"]
-[ext_resource type="Script" uid="uid://bldu7blv6gc2n" path="res://shop.gd" id="3_tda05"]
 [ext_resource type="PackedScene" uid="uid://b28kh7amyl040" path="res://main.tscn" id="4_e2u21"]
-[ext_resource type="Script" uid="uid://grhrcpn4fa4h" path="res://shop_2.gd" id="5_qn3nj"]
 [ext_resource type="PackedScene" uid="uid://c8jxmdss3v5hk" path="res://shop.tscn" id="5_tda05"]
 [ext_resource type="PackedScene" uid="uid://c0pd4ommcknb3" path="res://shop2.tscn" id="6_qn3nj"]
 
@@ -11,15 +9,7 @@
 script = ExtResource("1_112p8")
 
 [node name="shop" parent="." unique_id=1456735525 instance=ExtResource("5_tda05")]
-script = ExtResource("3_tda05")
 
 [node name="shop2" parent="." unique_id=1155712594 instance=ExtResource("6_qn3nj")]
-script = ExtResource("5_qn3nj")
 
 [node name="main" parent="." unique_id=1175136564 instance=ExtResource("4_e2u21")]
-
-[node name="Timer" type="Timer" parent="." unique_id=1785433316]
-autostart = true
-
-[connection signal="cookiePress" from="main" to="." method="_on_main_cookie_press"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
