@@ -13,3 +13,5 @@ script = ExtResource("1_112p8")
 [node name="shop2" parent="." unique_id=1155712594 instance=ExtResource("6_qn3nj")]
 
 [node name="main" parent="." unique_id=1175136564 instance=ExtResource("4_e2u21")]
+
+[connection signal="reset" from="shop2" to="shop" method="_on_shop_2_reset"]
