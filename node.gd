@@ -7,3 +7,4 @@ static var goldenPercent=0
 static var multi=1
 static var i=1
 static var timestwo=false
+static var gold=false

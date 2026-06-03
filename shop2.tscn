@@ -138,7 +138,9 @@ offset_right = 1135.0
 offset_bottom = 48.0
 text = "Back"
 
+[connection signal="reset" from="." to="." method="_on_reset"]
 [connection signal="pressed" from="timestwoBuy" to="." method="_on_timestwo_buy_pressed"]
+[connection signal="pressed" from="goldBuy" to="." method="_on_gold_buy_pressed"]
 [connection signal="pressed" from="resetprogBuy" to="." method="_on_resetprog_buy_pressed"]
 [connection signal="pressed" from="backpage" to="." method="_on_backpage_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]

@@ -1,10 +1,12 @@
 extends Node
-
+@onready var cookie= $cookie
 @onready var scoreText=$score
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	scoreText.text = "Cookies: "+ str(Gamee.score) 
-
+	if Gamee.gold:
+		cookie.texture_normal="res://pixil-frame-0 (4) copy.png"
+		cookie.texture_pressed="res://pixil-frame-0 (5) copy.png"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -56,7 +56,7 @@ func _on_resetprog_buy_pressed() -> void:
 		Gamee.goldenPercent=0
 		Gamee.score=0
 		price1=2500
-		price2=10000000
+		price2=10000000 
 		owned1=0
 		owned2=0
 		priceText1.text="Cost: "+str(price1)
@@ -66,3 +66,11 @@ func _on_resetprog_buy_pressed() -> void:
 		priceText3.text="Cost: "+str(price3)
 		ownedText3.text="Owned: "+str(owned3)
 		reset.emit()
+func _on_gold_buy_pressed() -> void:
+	if price2<=Gamee.score:
+		Gamee.score-=price2
+		price2*=2
+		owned2+=1
+		Gamee.gold=true
+		priceText2.text="Cost: "+str(price2)
+		ownedText2.text="Owned: "+str(owned2)
